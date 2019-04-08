@@ -18,4 +18,16 @@
   <build>
     <finalName>JenkinsWar</finalName>
   </build>
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>SuryaVamshi-releases</name>
+        <url>http://localhost:8040/artifactory/suryavamshi</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>SuryaVamshi-snapshots</name>
+        <url>http://localhost:8040/artifactory/suryavamshi</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
