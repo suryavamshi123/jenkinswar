@@ -1,10 +1,15 @@
 pipeline {
-    agent { docker 'maven:3.3.3' }
-    stages {
-        stage('build') {
-            steps {
-                bat 'mvn --version'
-            }
-        }
+  agent none
+  stages {
+    stage('pullcode') {
+      steps {
+        git(url: 'https://github.com/suryavamshi123/jenkinswar.git', branch: 'master')
+      }
     }
+    stage('build') {
+      steps {
+        bat 'mvn package'
+      }
+    }
+  }
 }
